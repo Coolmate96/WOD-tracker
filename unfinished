@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>ADA WOD tracker</title>
+  </head>
+  <body>
+
+
+<div class="container">
+  
+  <h1>WOD</h1>
+
+  <div class="form-group">
+    <label for="exampleInputWOD1">Enter WOD</label>
+    <input type="Enter WOD" class="form-control" id="questionform"  placeholder="Enter WOD">
+    
+  </div>
+  <div class="form-group">
+    <label for="exampleInputDifficulty1">Difficulty</label>
+    <input type="" class="form-control" id="assigneeform" placeholder="">
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleInputAssignedTo1">Assigned to</label>
+    <input type="" class="form-control" id="difficultyform" placeholder="">
+  </div>
+  
+  <button type="Add" class="btn btn-primary" onclick="addItem()">Add</button>
+
+
+
+<hr>
+
+
+<h1>The WOD</h1>
+
+<table id="wod-table" class="table">
+  <thead class="">
+    <tr>
+      <th scope="col"></th>
+      <th scope="col">Questions</th>
+      <th scope="col">Assignee</th>
+      <th scope="col">Difficulty</th>
+    </tr>
+  </thead>
+ 
+
+</table>
+<hr>
+
+<h1>About WOD</h1>
+<h3>What is Fibonacci</h3>
+<h3>Difficulty:Hard</h3>
+<h3>Assign to :Brenda</h3>
+<h3>Status:Open</h3>
+
+<button type="Mark as Done" class="btn btn-success">Mark as Done</button>
+
+<button type="Delete" class="btn btn-danger">Delete</button>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script type="text/javascript" >
+
+    
+
+
+function addItem(){
+ 
+  var questionText = document.getElementById('questionform').value;
+  var assigneeText = document.getElementById('assigneeform').value;
+  var difficultyText = document.getElementById('difficultyform').value;
+ 
+
+var newTr=document.createElement("tr")
+var newTd1=document.createElement("td")
+var newTd2=document.createElement("td")
+var newTd3=document.createElement("td")
+
+newTd1.innerHTML=questionText
+newTd2.innerHTML=assigneeText
+newTd3.innerHTML=difficultyText
+
+newTr.appendChild(newTd1)
+newTr.appendChild(newTd2)
+newTr.appendChild(newTd3)
+var table=document.getElementById("wod-table")
+table.appendChild(newTr)
+}
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
